@@ -6,31 +6,31 @@ $users = [
         'id' => 1,
         'name' => 'Ana Martínez',
         'email' => 'ana@example.com',
-        'password' => password_hash('password123', PASSWORD_DEFAULT), // Para login
+        'password' => 'password123', // Para login
     ],
     [
         'id' => 2,
         'name' => 'Carlos Gómez',
         'email' => 'carlos@example.com',
-        'password' => password_hash('qwerty456', PASSWORD_DEFAULT),
+        'password' => 'qwerty456',
     ],
     [
         'id' => 3,
         'name' => 'Laura Rodríguez',
         'email' => 'laura@example.com',
-        'password' => password_hash('abc12345', PASSWORD_DEFAULT),
+        'password' => 'abc12345',
     ],
     [
         'id' => 4,
         'name' => 'David Torres',
         'email' => 'david@example.com',
-        'password' => password_hash('pass7890', PASSWORD_DEFAULT),
+        'password' => 'pass7890',
     ],
     [
         'id' => 5,
         'name' => 'María López',
         'email' => 'maria@example.com',
-        'password' => password_hash('mypass321', PASSWORD_DEFAULT),
+        'password' => 'mypass321',
     ]
 ];
 
