@@ -36,6 +36,7 @@ if(!$sesionUser){
         <?php 
         foreach($posts as $post): ?>
             <?php if($post['status'] == 'published'): ?>
+                <img src="<?php echo $post['image'];?>" alt="imagen">
                    <h5 class="card-title"><?php echo $post['title']; ?></strong>:</h5> 
                     <p class="card-text"><?php echo $post['description'];?> </p> 
                 
