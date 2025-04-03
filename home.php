@@ -26,6 +26,7 @@ if(!$sesionUser){
 
         
     <h2 class="text-center"> Hola <?php echo $sesionUser['name']; ?> </h2>
+    <a class="bg-dark btn text-light" href="logout.php">Cerrar Sesión</a>
 
     
        
