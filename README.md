@@ -145,7 +145,6 @@ if(!$sesionUser){
 ## ✅ **Mejoras Futuras**
 1. **Usar una base de datos MySQL en lugar de un array.**
 2. **Cifrar contraseñas con `password_hash()` en lugar de almacenarlas en texto plano.**
-3. **Añadir funcionalidad de cierre de sesión (`logout.php`).**
 4. **Permitir registro de nuevos usuarios.**
 
 ---
