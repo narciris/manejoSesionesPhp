@@ -2,35 +2,45 @@
 session_start();
 ?>
 
+<!DOCTYPE html>
 <html> 
     <head>
         <title>Login</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     </head>
-    <body>
+    <body class="bg-info">
         <div class="d-flex justify-content-center align-items-center vh-100" >
 
     <div class="card p-4" style="max-width: 400px; width: 100%;">
    
                 <h2 class="text-center">Iniciar sesion</h2>
-            <form action="" method="post">
+                <?php 
+                if (isset($_SESSION['error'])) { 
+                    echo '<p style="color: red;">' . $_SESSION['error'] . '</p>';
+                    unset($_SESSION['error']);
+                } 
+                ?>
+
+            <form action="proccess-login.php" method="post">
                 <div class="mb-3" >
+
                 <label 
                 for="email" 
                 class="form-label"
                 >Correo electronico</label>
-                <input type="email" 
-                name="email"
+                <input
+                 type="email" 
+                 name="email"
                  placeholder="Escribe tu correo"
                  class="form-control"
                  >
                 </div>
            
-                <div class="mb-3 style="max-width: 400px; width: 100%;">
+                <div class="mb-3">
+
                 <label 
                 for="password" 
                 name="password"
-                 type="password"
                  class="form-label"
                  >Contraseña</label>
 
@@ -41,9 +51,9 @@ session_start();
                  placeholder="Escribe tu contraseña"
                  >
                 </div>
-               
+                <button type="submit" class="btn btn-success">Iniciar sesion</button>
+
             </form>
-            <button type="submit" class="btn btn-success">Iniciar sesion</button>
             </div>
         </div>
     </body>
