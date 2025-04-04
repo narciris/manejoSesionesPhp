@@ -141,6 +141,20 @@ if(!$sesionUser){
 - Se muestra el nombre del usuario autenticado.
 
 ---
+### 4️⃣ **logout.php** (destruye la sesion)
+este archivo maneja el cierre de sesion, cuando un usuario da click en el boton de cerrar sesion
+1️⃣ Iniciar la sesión con session_start()
+Esto es necesario para acceder a las variables de sesión existentes y poder eliminarlas.
+2️⃣ Eliminar todas las variables de sesión con session_unset()
+Esto vacía el array $_SESSION, eliminando cualquier información almacenada en la sesión.
+3️⃣ Destruir la sesión con session_destroy()
+ Esto elimina completamente la sesión del servidor, asegurando que no queden rastros de los datos del usuario.
+ 4️⃣ Redirigir al usuario a index.php
+Después de cerrar la sesión, se usa header('Location: index.php'); para enviarlo de vuelta a la página de inicio de sesión.
+
+será manejado por este archivo que se encarga de destruir la sesion y redigir a la pagina de index.php
+donde se encuentra el formulario de inicio de sesion 🚀
+
 
 ## ✅ **Mejoras Futuras**
 1. **Usar una base de datos MySQL en lugar de un array.**

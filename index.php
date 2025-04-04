@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,12 @@ session_start();
                     unset($_SESSION['error']);
                 } 
                 ?>
+
+                <?php if (isset($_SESSION['logout_message'])): ?>
+                    <p style="color: green;"><?php echo $_SESSION['logout_message']; ?></p>
+                    <?php unset($_SESSION['logout_message']); ?>
+                <?php endif; ?>
+
 
             <form action="proccess-login.php" method="post">
                 <div class="mb-3" >
